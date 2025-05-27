@@ -1,185 +1,131 @@
-*/* Resetando as configurações padrão */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologia no Campo</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Adicionando estilo básico para o layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-/* Definindo a fonte padrão e estilo global */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4; /* Fundo claro para destacar o conteúdo */
-    color: #333; /* Cor de texto padrão */
-    line-height: 1.6;
-}
+        header {
+            background-color: #4CAF50;
+            padding: 20px;
+            color: white;
+        }
 
-/* Menu de navegação fixo */
-.menu-h ul {
-    width: 100%;
-    height: 80px;
-    background-color: #005f3f; /* Verde escuro para representar o campo */
-    font-family: Arial;
-    position: fixed;
-    padding: 0 20%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        .menu-h ul {
+            list-style-type: none;
+            padding: 0;
+        }
 
-.menu-h ul li {
-    display: inline-block;
-    margin: 0 20px;
-}
+        .menu-h ul li {
+            display: inline;
+            margin-right: 20px;
+        }
 
-.menu-h ul li a {
-    color: white;
-    padding: 20px;
-    display: inline-block;
-    text-decoration: none;
-    transition: background 0.3s ease;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-}
+        .menu-h ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-.menu-h ul li a:hover {
-    background-color: #ffcc00; /* Destaque amarelo para hover */
-}
+        .marquee span {
+            font-size: 18px;
+            font-style: italic;
+        }
 
-/* Marquee - Texto de destaque */
-.marquee {
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    text-transform: uppercase;
-}
+        .texto__principal {
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
 
-/* Estilo para as imagens de fundo */
-.imagem {
-    width: 100%;
-    height: 500px;
-    text-align: center;
-    padding: 40px 4%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: rgb(20, 20, 20);
-}
+        .texto {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-/* Efeito de imagem ao passar o mouse */
-.secundario__imagem {
-    width: 150px;
-    height: 100px;
-    padding: 0 24px;
-    transition: 0.4s all ease-in-out;
-}
+        .texto h2 {
+            color: #333;
+        }
 
-.texto:hover img {
-    transform: scale(1.8);
-}
+        .secundario_imagem {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
 
-/* Estilo da seção de texto */
-.texto {
-    width: 100%;
-    height: auto;
-    text-align: center;
-    padding: 40px 4%;
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    color: rgb(20, 20, 20);
-}
+        .imagem {
+            padding: 10px;
+        }
 
-/* Seção principal */
-.texto__principal {
-    width: 100%;
-    height: 150px;
-    text-align: center;
-    padding: 60px 4%;
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    color: rgb(20, 20, 20);
-    background-color: #ffffff;
-    margin-top: 120px; /* Distância para o topo */
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
+        .marquee {
+            margin-top: 10px;
+        }
+    </style>
+</head>
 
-h1 {
-    margin-bottom: 20px;
-    font-size: 36px;
-    color: #005f3f;
-}
+<body>
+    <header>
+        <nav class="menu-h">
+            <ul>
+                <li><a href="#sustentabilidade">Sustentabilidade no Campo</a></li>
+                <li><a href="#agricultura-precisao">Agricultura de Precisão</a></li>
+                <li><a href="#tecnologia-campo">Tecnologia no Campo</a></li>
+            </ul>
+            <div class="marquee"><span>Inovações tecnológicas para um futuro sustentável no agronegócio</span></div>
+        </nav>
+    </header>
 
-/* Backgrounds de seções específicas */
-section:nth-of-type(2) {
-    background-image: url('campo.jpg');
-    background-position: center;
-    background-size: cover;
-}
+    <section class="texto__principal">
+        <h1>Tecnologia no Campo</h1>
+        <p>
+            A tecnologia tem se tornado um pilar essencial no desenvolvimento do agronegócio, especialmente quando o objetivo é aumentar a eficiência e a sustentabilidade das atividades agrícolas. Neste contexto, as inovações tecnológicas desempenham um papel fundamental na transformação da agricultura, seja no manejo de recursos naturais, no uso de novas máquinas e ferramentas, ou na implementação de sistemas que garantem a sustentabilidade e a alta produtividade.
+        </p>
+    </section>
 
-section:nth-of-type(4) {
-    background-image: url('cidade.jpg');
-    background-position: center;
-    background-size: cover;
-}
+    <section id="sustentabilidade" class="texto">
+        <h2>Sustentabilidade no Campo</h2>
+        <!-- Imagem de práticas sustentáveis no campo -->
+        <img src="imagens/agricultura-sustentavel.jpg" alt="Práticas Sustentáveis no Campo" class="secundario_imagem">
+        <p>
+            A sustentabilidade no campo envolve a adoção de práticas que promovem a preservação ambiental, ao mesmo tempo em que garantem a produção agrícola eficiente e de qualidade. O uso responsável dos recursos naturais, como a água, e a integração de técnicas que promovem a saúde do solo, como a rotação de culturas e o uso de energias renováveis, são fundamentais para garantir que a agricultura seja viável a longo prazo, sem comprometer o meio ambiente.
+        </p>
+    </section>
 
-section:nth-of-type(6) {
-    background-image: url('oportunidade.jpg');
-    background-position: center;
-    background-size: cover;
-}
+    <section class="imagem"></section>
 
-/* Efeito de borda para a classe .caixa */
-.caixa {
-    margin: auto;
-    position: relative;
-    width: 200px;
-    height: 40px;
-    color: #151320;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    font-weight: 700;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+    <section id="agricultura-precisao" class="texto">
+        <h2>Agricultura de Precisão</h2>
+        <!-- Imagem de drones ou sensores utilizados na agricultura de precisão -->
+        <img src="imagens/drone-agricultura.jpg" alt="Drone na Agricultura de Precisão" class="secundario_imagem">
+        <p>
+            A agricultura de precisão utiliza tecnologias avançadas como GPS, sensores e drones para monitorar de forma detalhada as variáveis do campo, como umidade, temperatura e saúde do solo. Com essas ferramentas, os agricultores conseguem aplicar insumos de forma mais eficiente, reduzindo desperdícios e promovendo uma produção mais sustentável. Essa abordagem ajuda a maximizar a produtividade ao mesmo tempo em que minimiza os impactos ambientais.
+        </p>
+    </section>
 
-.caixa::before, .caixa::after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    width: calc(100% + 10px);
-    height: calc(100% + 10px);
-    background: linear-gradient(45deg, #6a9e3e, #3c5631, #83b941, #9fba4d);
-    background-size: 300%;
-    background-repeat: no-repeat;
-    background-position: 100%;
-    border-radius: 10px;
-    animation: AnimarBorda 4s linear infinite;
-}
+    <section class="imagem"></section>
 
-@keyframes AnimarBorda {
-    0% {
-        background-position: 0;
-    }
-    100% {
-        background-position: 300%;
-    }
-}
+    <section id="tecnologia-campo" class="texto">
+        <h2>Tecnologia no Campo</h2>
+        <!-- Imagem de tecnologias aplicadas na agricultura, como máquinas automatizadas -->
+        <img src="imagens/maquinas-agricolas.jpg" alt="Máquinas Agrícolas Automatizadas" class="secundario_imagem">
+        <p>
+            A tecnologia no campo tem transformado completamente as práticas agrícolas. Desde o uso de tratores e colheitadeiras automatizadas até o monitoramento remoto por satélites, as inovações tecnológicas permitem uma gestão mais precisa e eficaz das atividades agrícolas. Ferramentas como a inteligência artificial e o Big Data estão revolucionando a análise de dados, ajudando os agricultores a tomar decisões mais informadas sobre o uso de recursos, o que resulta em uma produção mais eficiente e sustentável.
+        </p>
+    </section>
 
-.caixa::after {
-    filter: blur(5px);
-}
+</body>
+</html>
 
-/* Efeito hover na .caixa */
-.caixa:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
-}
 
