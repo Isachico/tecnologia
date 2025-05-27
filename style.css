@@ -1,183 +1,185 @@
-*{
-    padding: 0;
+*/* Resetando as configurações padrão */
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-.menu-h ul{
+/* Definindo a fonte padrão e estilo global */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Fundo claro para destacar o conteúdo */
+    color: #333; /* Cor de texto padrão */
+    line-height: 1.6;
+}
+
+/* Menu de navegação fixo */
+.menu-h ul {
     width: 100%;
     height: 80px;
-    background-color: #000501;
+    background-color: #005f3f; /* Verde escuro para representar o campo */
     font-family: Arial;
     position: fixed;
-    padding: 0 32%;
-  
-    
+    padding: 0 20%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.menu-h ul li{
-    display: inline;
-    width:200px;
-    float: center;  
+.menu-h ul li {
+    display: inline-block;
+    margin: 0 20px;
 }
 
-.menu-h ul li a{
-    color: #FFFFFF;
-    padding: 40px;
+.menu-h ul li a {
+    color: white;
+    padding: 20px;
     display: inline-block;
     text-decoration: none;
-    transition: background ,4s; 
-    text-align: center; 
+    transition: background 0.3s ease;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-.menu-h ul li a:hover{
-    background-color: #b09e9e;   
+.menu-h ul li a:hover {
+    background-color: #ffcc00; /* Destaque amarelo para hover */
 }
 
+/* Marquee - Texto de destaque */
+.marquee {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
 
-/*container*/
-.imagem{
+/* Estilo para as imagens de fundo */
+.imagem {
     width: 100%;
     height: 500px;
     text-align: center;
     padding: 40px 4%;
-    color: rgb(20,20,20);
-
     background-position: center;
-    background-size: cover;/*significa que a imagem de fundo sempre se ajustará a toda a div*/
-    background-repeat: no-repeat;/**/
-    background-attachment: fixed;/**/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: rgb(20, 20, 20);
 }
 
+/* Efeito de imagem ao passar o mouse */
 .secundario__imagem {
-    width: 100px;
-    height: 50px;
+    width: 150px;
+    height: 100px;
     padding: 0 24px;
-    transition: .4s all ease-in-out;
+    transition: 0.4s all ease-in-out;
 }
 
-.texto:hover img{
+.texto:hover img {
     transform: scale(1.8);
 }
 
-.texto{
+/* Estilo da seção de texto */
+.texto {
     width: 100%;
-    height: 250px;
+    height: auto;
     text-align: center;
     padding: 40px 4%;
-    font-family: roboto;
+    font-family: 'Roboto', sans-serif;
     font-size: 24px;
-    color: rgb(20,20,20);
-}
-.texto__principal{/**/
-    width: 100%;/*largura*/
-    height: 100px;/*altura*/
-    text-align: center;/*alinhamento do texto*/
-    padding: 60px 4%;/*espaçamento interno*/
-    font-family: roboto;/*tipo da fonte*/
-    font-size: 24px;/*tamanho da fonte*/
-    color: rgb(20,20,20);/*cor da fonte*/
-}
-h1{
-    margin-bottom: 20px;/* define a margin area na parte inferior de um elemento*/
-
+    color: rgb(20, 20, 20);
 }
 
-section:nth-of-type(2){/*pseudo-classe CSS selecionam itens de um grupo de elementos HTML*/
-    background-image: url("campo.jpg");/*imagem de fundo*/
-}
-section:nth-of-type(4){
-    background-image: url("cidade.jpg");
-}
-section:nth-of-type(6){
-    background-image: url("oportunidade.jpg");
+/* Seção principal */
+.texto__principal {
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    padding: 60px 4%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: rgb(20, 20, 20);
+    background-color: #ffffff;
+    margin-top: 120px; /* Distância para o topo */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #005f3f;
+}
 
+/* Backgrounds de seções específicas */
+section:nth-of-type(2) {
+    background-image: url('campo.jpg');
+    background-position: center;
+    background-size: cover;
+}
 
-/*para colocar o efeito na borda*/
+section:nth-of-type(4) {
+    background-image: url('cidade.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+section:nth-of-type(6) {
+    background-image: url('oportunidade.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+/* Efeito de borda para a classe .caixa */
 .caixa {
     margin: auto;
-     position: relative;
-     width: 50px;
-     height: 20px;
-     color: #151320;
-     background: #fff;
-     display: flex;
+    position: relative;
+    width: 200px;
+    height: 40px;
+    color: #151320;
+    background: #fff;
+    display: flex;
     justify-content: center;
-     align-items: center;
-     border-radius: 3px;
-     font-weight: 700;
- }
- 
- .caixa::before, .caixa::after {
-     content: '';
-     position: absolute;
-     z-index: -1;
-     width: calc(100% + 5px);
-     height: calc(100% + 5px);
-     background: linear-gradient(45deg, #c3c4c4, #979696, #646364, 
-     #839a9f, #d7d8d8, #9f9f9f, #939292, #646364);
-     background-size: 300%;
-     background-repeat: no-repeat;
-     background-position: 100%;
-     border-radius: 10px;
-     animation: AnimarBorda 4s linear infinite;
-     
- }
- 
- @keyframes AnimarBorda {
-     0% {
-         background-position: 0;
-     }
-     100% {
-         background-position: 300%;
-     }
- }
- .caixa::after {
-     filter: blur(5px);
- }
- 
- .caixa {
-     margin: auto;
-      position: relative;
-      width: 50px;
-      height: 20px;
-      color: #151320;
-      background: #fff;
-      display: flex;
-     justify-content: center;
-      align-items: center;
-      border-radius: 3px;
-      font-weight: 700;
-  }
-  
-  .caixa::before, .caixa::after {
-      content: '';
-      position: absolute;
-      z-index: -1;
-      width: calc(100% + 5px);
-      height: calc(100% + 5px);
-      background: linear-gradient(45deg, #128686, #8d1313, #646364, 
-      #839a9f, #d7d8d8, #881111, #939292, #b91bb9);
-      background-size: 300%;
-      background-repeat: no-repeat;
-      background-position: 100%;
-      border-radius: 10px;
-      animation: AnimarBorda 4s linear infinite;
-      
-  }
-  
-  @keyframes AnimarBorda {
-      0% {
-          background-position: 0;
-      }
-      100% {
-          background-position: 300%;
-      }
-  }
-  .caixa::after {
-      filter: blur(5px);
-  }
-  
-  
+    align-items: center;
+    border-radius: 20px;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.caixa::before, .caixa::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    background: linear-gradient(45deg, #6a9e3e, #3c5631, #83b941, #9fba4d);
+    background-size: 300%;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    border-radius: 10px;
+    animation: AnimarBorda 4s linear infinite;
+}
+
+@keyframes AnimarBorda {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 300%;
+    }
+}
+
+.caixa::after {
+    filter: blur(5px);
+}
+
+/* Efeito hover na .caixa */
+.caixa:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
