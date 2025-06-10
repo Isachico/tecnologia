@@ -60,7 +60,7 @@
         }
 
         .secundario_imagem {
-            width: 100%;
+            width: 30%;
             height: auto;
             border-radius: 8px;
         }
@@ -73,7 +73,8 @@
             margin-top: 10px;
         }
 
-        .secundario_imagem{height: 300px;width: 300px;
+        .secundario_imagem{height: 300px
+      
 
         }
     
